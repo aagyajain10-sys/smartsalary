@@ -326,22 +326,6 @@ st.markdown("""
     -webkit-box-shadow: 0 0 0 1000px var(--panel-2) inset !important;
     -webkit-text-fill-color: var(--text) !important;
 }
-.stApp [data-baseweb="select"] > div {
-    background: var(--panel-2) !important;
-    border-color: var(--line) !important;
-    border-radius: 10px !important;
-}
-.stApp [data-baseweb="select"] span,
-.stApp [data-baseweb="select"] input {
-    color: var(--text) !important;
-    -webkit-text-fill-color: var(--text) !important;
-}
-[data-baseweb="popover"], [data-baseweb="menu"],
-[role="option"] {
-    background: var(--panel-3) !important;
-    color: var(--text) !important;
-}
-[role="option"]:hover {background: var(--blue-soft) !important;}
 
 /* Buttons */
 .stButton > button, .stFormSubmitButton > button,
@@ -487,9 +471,45 @@ div[data-testid="stVerticalBlockBorderWrapper"] {
     padding: 1.4rem;
 }
 div[data-testid="stVerticalBlock"] {gap: .85rem;}
+/* Tablets and smaller screens */
 @media (max-width: 800px) {
-    .block-container {padding-top: 1rem;}
-    .hero-shell {padding: 1.25rem;}
+    .block-container {
+        padding-top: 1rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .hero-shell {
+        padding: 1.25rem;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .block-container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .hero-shell {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.6rem !important;
+    }
+
+    h2 {
+        font-size: 1.3rem !important;
+    }
+
+    h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .stButton button {
+        width: 100%;
+    }
 }
 </style>
 """, unsafe_allow_html=True)
